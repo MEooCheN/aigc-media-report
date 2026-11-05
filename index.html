@@ -2740,8 +2740,10 @@ if(motion){
     var msg = {__deckCmd:1, name:name, arg:arg};
     var audience = window.__pptAudienceWindow;
     var presenting = document.body.classList.contains('ppt-presenter');
-    if(presenting && audience && !audience.closed){
-      try{ audience.postMessage(msg, '*'); }catch(e){}
+    if(presenting){
+      if(audience && !audience.closed){
+        try{ audience.postMessage(msg, '*'); }catch(e){}
+      }
       return;
     }
     runCmd(msg);
