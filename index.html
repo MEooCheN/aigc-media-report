@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AIGC 来了，传媒生怎么办 · 课程汇报</title>
+<title>1000 条评论 · 课程汇报</title>
 <!-- GZ:FONTS:START · 字体由 guizang-design 字体清单生成；需要把字体内置进 HTML 时用 gz-fonts.mjs embed（卡片 skill 的 render.mjs 会自动内置） -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1054,6 +1054,8 @@
   #deckctl button{appearance:none; display:flex; justify-content:space-between; align-items:center; gap:8px; border:1px solid #3a3e48; background:#20242a; color:#e9ecef; border-radius:6px; padding:8px 9px; font:600 12px/1 inherit; cursor:pointer; text-align:left}
   #deckctl button:hover{background:#2a2f37; border-color:#525864}
   #deckctl kbd{font:600 10px/1 var(--mono); padding:3px 5px; border:1px solid #4a505b; border-radius:4px; color:#9aa3ae}
+  #hint{display:none}
+  body.at-cover #hint{display:flex}
 </style>
 </head>
 <body>
@@ -1089,7 +1091,7 @@
   <span>← → 翻页</span><span class="ppt-sep">·</span>
   <button id="ppt-low-power-btn" type="button"><span class="ppt-key">B</span><span class="ppt-low-power-label">静态</span></button><span class="ppt-sep">·</span>
   <button id="ppt-overview-btn" type="button"><span class="ppt-key">ESC</span>总览</button><span class="ppt-sep">·</span>
-  <button id="ppt-presenter-btn" type="button"><span class="ppt-key">P</span>演讲模式</button>
+  
 </div>
 
 <div id="deck">
@@ -1109,13 +1111,13 @@
   <div class="frame" style="display:grid; gap:4vh; align-content:center; min-height:78vh">
     <div class="kicker" data-anim>课程作业 · 评论 KPI：1000 条</div>
     <h1 class="h-hero" style="font-size:min(9vw,15.5vh)" data-anim>1000 条评论</h1>
-    <p class="lead" style="max-width:54vw" data-anim>老师给的指标是 1000 条评论。这条片子拿到了 1010 条。今天讲的是我们怎么做到的——以及前面失败了三次。</p>
+    <p class="lead" style="max-width:54vw" data-anim>老师给的指标是 1000 条评论。我们发了四条，前三条都没起来，第四条拿到了 1010 条。今天讲这个。</p>
     <div class="meta-row" data-anim>
-      <span>第三组</span><span>·</span><span>一次有 KPI 的创作复盘</span><span>·</span><span>11 页 / 约 13 分钟</span>
+      <span>第三组</span><span>·</span><span>一次有 KPI 的创作复盘</span>
     </div>
   </div>
   <div class="foot">
-    <div>不是“AI 来了怎么办”，是“评论怎么破千”</div>
+    <div>一次冲评论 KPI 的复盘</div>
     <div>— 01 —</div>
   </div>
 </section>
@@ -1141,13 +1143,13 @@
         <div data-anim style="border-top:1px solid rgba(127,127,127,.35); padding-top:1.6vh">
           <div class="kicker" style="opacity:.5">评论数据</div>
           <p style="font-family:var(--sans-zh); font-size:max(15px,1.05vw); line-height:1.7; opacity:.85; margin-top:.6vh">
-            评论只有 <b style="font-family:var(--serif-en); font-size:1.25em">144</b> 条——不到播放的千分之一。分享 9,750、收藏 904，看着都不错。
+            评论 <b style="font-family:var(--serif-en); font-size:1.25em">144</b> 条。分享 9,750、收藏 904 都还行，但没什么人说话。
           </p>
         </div>
         <div data-anim style="border-top:1px solid rgba(127,127,127,.35); padding-top:1.6vh">
           <div class="kicker" style="opacity:.5">收获</div>
           <p style="font-family:var(--sans-zh); font-size:max(15px,1.05vw); line-height:1.7; opacity:.85; margin-top:.6vh">
-            流量不等于讨论。反差和猎奇能带来播放，但带不来争吵——而评论要的是争吵。
+            播放靠反差和猎奇，评论得靠“这事跟我有关”。上次只做到了前一半。
           </p>
         </div>
       </div>
@@ -1174,7 +1176,7 @@
   <div class="frame" style="padding-top:4vh">
     <div class="kicker" data-anim>三个方向，一个星期</div>
     <h2 class="h-xl" data-anim style="margin-top:1vh">评论数：41、2、1</h2>
-    <p class="lead" data-anim style="margin-top:1.6vh; max-width:58vw">播放最高 2,821 的那条，也只有 41 条评论。离 1,000 差得不是一点。</p>
+    <p class="lead" data-anim style="margin-top:1.6vh; max-width:58vw">播放最高那条 2,821，评论 41 条。</p>
 
     <div style="display:flex; gap:2.6vw; justify-content:center; align-items:flex-start; margin-top:auto; margin-bottom:2vh" data-anim>
       <div class="shotcol"><img class="shot" src="images/03-2821.jpg" alt="AI 古风短片后台：2821 播放、41 条评论" style="height:40vh"><span class="shotcap">AI 古风短片 · 41 条评论</span></div>
@@ -1200,7 +1202,7 @@
       <div class="kicker" data-anim>41 条评论</div>
       <h2 class="h-xl" data-anim style="margin-top:1vh; font-size:min(5.4vw,9.4vh); white-space:nowrap">一半在问工具</h2>
       <p class="lead" style="margin-top:3vh; max-width:34vw" data-anim>“用什么软件做的？”“这条多少钱？”——一半的评论在问这个。</p>
-      <p style="font-family:var(--serif-zh); font-size:max(16px,1.4vw); line-height:1.7; opacity:.72; margin-top:3vh; max-width:32vw" data-anim>没有可争的点，就没有评论。这是我们第一次摸到 KPI 的门。</p>
+      <p style="font-family:var(--serif-zh); font-size:max(16px,1.4vw); line-height:1.7; opacity:.72; margin-top:3vh; max-width:32vw" data-anim>没人有话说，评论自然起不来。</p>
     </div>
     <div style="display:flex; justify-content:center" data-anim>
       <div class="shotcol"><img class="shot" src="images/04-tools.jpg" alt="评论区在问用什么软件、多少钱" style="height:52vh"><span class="shotcap">同一条视频的评论区</span></div>
@@ -1249,7 +1251,7 @@
 
     <div style="margin-top:8vh; border-top:1px solid rgba(127,127,127,.3); padding-top:2.6vh; display:flex; justify-content:space-between; align-items:baseline; gap:3vw" data-anim>
       <p style="font-family:var(--sans-zh); font-size:max(15px,1.08vw); line-height:1.75; opacity:.72; max-width:64vw">
-        为什么值得比？因为“谁更能让人开口”这件事，只有其他条件一样的时候，才比得出来。
+        条件一样，比出来的差别才算数。
       </p>
       <span class="meta" style="opacity:.4">Single Variable</span>
     </div>
@@ -1296,8 +1298,8 @@
   </div>
   <div class="frame" style="padding-top:4vh">
     <div class="kicker" data-anim>一周之后 · 目标 1,000 条</div>
-    <h2 class="h-xl" data-anim style="margin-top:1vh; font-size:min(5.2vw,9.2vh)">1,010 条，达标</h2>
-    <p class="lead" style="max-width:58vw; margin-top:2.2vh" data-anim>1010 条评论、1041 个赞。老师要 1000 条，我们超了 10 条。</p>
+    <h2 class="h-xl" data-anim style="margin-top:1vh; font-size:min(5.2vw,9.2vh)">1,010 条</h2>
+    <p class="lead" style="max-width:58vw; margin-top:2.2vh" data-anim>一周，1010 条评论、1041 个赞。老师要 1000 条，超了 10 条。</p>
 
     <div style="display:flex; gap:3vw; margin-top:3vh" data-anim>
       <div class="stat"><div class="m">评论</div><div class="n" style="font-size:min(3vw,5vh)">1,010</div><div class="l">目标 1000</div></div>
@@ -1384,7 +1386,7 @@
 
     <div style="margin-top:7vh; border-top:1px solid rgba(127,127,127,.3); padding-top:2.4vh" data-anim>
       <p style="font-family:var(--sans-zh); font-size:max(15px,1.08vw); line-height:1.7; opacity:.66; max-width:64vw">
-        所以这次我们把它当工具，不当对手——省下来的时间，全花在“怎么让人想说”上。
+        它替我们省了时间，我们把时间花在选题上。
       </p>
     </div>
   </div>
@@ -1408,7 +1410,7 @@
       <div data-anim style="border-top:1px solid rgba(127,127,127,.4); padding-top:2vh">
         <div class="step-nb">01</div>
         <h3 class="h-md" style="margin-top:1vh">选题要留一个能吵的点</h3>
-        <p style="font-family:var(--sans-zh); font-size:max(15px,1.02vw); line-height:1.7; opacity:.7; margin-top:1.2vh">“AI 能不能替代传媒生”——这个问题每个人都有自己的答案，才有人愿意写下来。</p>
+        <p style="font-family:var(--sans-zh); font-size:max(15px,1.02vw); line-height:1.7; opacity:.7; margin-top:1.2vh">“AI 能不能替代传媒生”，每个人对这个问题都有话说。</p>
       </div>
       <div data-anim style="border-top:1px solid rgba(127,127,127,.4); padding-top:2vh">
         <div class="step-nb">02</div>
@@ -1547,7 +1549,7 @@ const SPEAKER_NOTES = [
   },
   {
     "id": "result",
-    "title": "1,010 条，达标",
+    "title": "1,010 条",
     "section": "结果",
     "minutes": 1.5,
     "purpose": "KPI 达成的关键页：数字 + 谁把评论区点着的。",
@@ -2007,7 +2009,7 @@ slides.forEach((s,i)=>{
 function go(n,opts={}){
   if(lock&&!opts.force)return;
   idx=Math.max(0,Math.min(total-1,n));
-  window.__currentSlideIndex = idx;
+  window.__currentSlideIndex = idx;document.body.classList.toggle('at-cover', idx===0);
   deck.style.transform=`translateX(${-idx*100}vw)`;
   nav.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active',i===idx));
   /* 深浅页：读 section 上的 class（light/dark）；section 的 data-theme 只认 light/dark——
@@ -2512,7 +2514,7 @@ window.__pptPresenter=(()=>{
     const editable=e.target?.matches?.('input,textarea,[contenteditable="true"]');
     if(editable){if(e.key==='Escape')e.target.blur();return true;}
     if(mode==='audience'||mode==='preview'){e.preventDefault();return true;}
-    if(mode==='deck'&&e.key?.toLowerCase()==='p'&&!e.metaKey&&!e.ctrlKey&&!e.altKey){e.preventDefault();enterPresenter(true);return true;}
+    if(false){}
     if(mode!=='presenter')return false;
     const key=e.key?.toLowerCase();
     const dialog=document.getElementById('ppt-dialog');
