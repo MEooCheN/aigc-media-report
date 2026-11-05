@@ -1045,6 +1045,12 @@
   #imgzoom[hidden]{display:none}
   #imgzoom img{max-width:92vw; max-height:88vh; object-fit:contain; box-shadow:0 24px 80px rgba(0,0,0,.6)}
   #imgzoom .zhint{position:absolute; left:0; right:0; bottom:2.4vh; text-align:center; color:#bdb7ab; font-family:var(--mono); font-size:12px; letter-spacing:.22em}
+  #deckctl{position:fixed; right:18px; top:70px; z-index:120; display:none; flex-direction:column; gap:6px; width:176px; padding:10px; border:1px solid #363a43; border-radius:10px; background:rgba(18,21,26,.96); color:#e9ecef; font:600 12px/1.2 Inter,"Noto Sans SC",sans-serif; box-shadow:0 10px 30px rgba(0,0,0,.35)}
+  #deckctl.on{display:flex}
+  #deckctl > span{font-size:10px; letter-spacing:.18em; color:#8f97a3; margin-bottom:2px}
+  #deckctl button{appearance:none; display:flex; justify-content:space-between; align-items:center; gap:8px; border:1px solid #3a3e48; background:#20242a; color:#e9ecef; border-radius:6px; padding:8px 9px; font:600 12px/1 inherit; cursor:pointer; text-align:left}
+  #deckctl button:hover{background:#2a2f37; border-color:#525864}
+  #deckctl kbd{font:600 10px/1 var(--mono); padding:3px 5px; border:1px solid #4a505b; border-radius:4px; color:#9aa3ae}
 </style>
 </head>
 <body>
@@ -1270,30 +1276,30 @@
     <div>05 · 结果</div>
     <div>06 / 10</div>
   </div>
-  <div class="frame grid-2-7-5" style="padding-top:5vh">
-    <div style="display:flex; flex-direction:column; gap:2.4vh">
-      <div class="kicker" data-anim>同一套文案 · 同一个账号</div>
-      <h2 class="h-xl" data-anim style="font-size:min(5.2vw,9.2vh)">AI 那条，赢了</h2>
-      <p class="lead" style="max-width:36vw" data-anim>发出去一周：1010 条评论、1041 个赞。老师要求 1000 条评论，我们超了 10 条。</p>
-      <div style="display:flex; gap:2.6vw; margin-top:1vh" data-anim>
-        <div class="stat"><div class="m">评论</div><div class="n" style="font-size:min(3.2vw,5.4vh)">1,010</div><div class="l">要求 1000</div></div>
-        <div class="stat"><div class="m">点赞</div><div class="n" style="font-size:min(3.2vw,5.4vh)">1,041</div><div class="l">点赞约等于评论</div></div>
-        <div class="stat"><div class="m">作者留言获赞</div><div class="n" style="font-size:min(3.2vw,5.4vh)">135</div><div class="l">写在评论区里的话</div></div>
-      </div>
-      <p style="font-family:var(--serif-zh); font-size:max(16px,1.35vw); line-height:1.7; opacity:.8; margin-top:1.6vh; max-width:36vw" data-anim>
-        “我真人出镜的那条，流量、评论量、收藏量，远不及这一条我用 AI 制作的。文案都一模一样的。”
-      </p>
-      <p style="font-family:var(--sans-zh); font-size:max(14px,1vw); line-height:1.7; opacity:.5; margin-top:2.4vh; max-width:36vw" data-anim>
-        这一页我们改了很多遍，因为怎么写都像是在给自己找理由。
-      </p>
+  <div class="frame" style="padding-top:4vh">
+    <div class="kicker" data-anim>同一套文案 · 同一个账号</div>
+    <h2 class="h-xl" data-anim style="margin-top:1vh; font-size:min(5.2vw,9.2vh)">AI 那条，赢了</h2>
+    <p class="lead" style="max-width:58vw; margin-top:2.2vh" data-anim>1010 条评论、1041 个赞、41 次收藏——超了老师 10 条。</p>
+
+    <div style="display:flex; gap:3vw; margin-top:3vh" data-anim>
+      <div class="stat"><div class="m">评论</div><div class="n" style="font-size:min(3.2vw,5.4vh)">1,010</div><div class="l">要求 1000</div></div>
+      <div class="stat"><div class="m">点赞</div><div class="n" style="font-size:min(3.2vw,5.4vh)">1,041</div><div class="l">点赞约等于评论</div></div>
+      <div class="stat"><div class="m">作者留言获赞</div><div class="n" style="font-size:min(3.2vw,5.4vh)">135</div><div class="l">写在评论区里的话</div></div>
+      <div class="stat"><div class="m">收藏</div><div class="n" style="font-size:min(3.2vw,5.4vh)">41</div><div class="l">没什么人存</div></div>
     </div>
-    <figure class="frame-img" data-anim style="aspect-ratio:1280/499; max-height:30vh; margin-top:9vh">
-      <img src="images/06-author.jpg" alt="作者在抖音评论区的留言，获 135 赞">
-      <figcaption class="img-cap">作者留言 · 抖音评论区 · 135 赞</figcaption>
-    </figure>
+
+    <p style="font-family:var(--serif-zh); font-size:max(16px,1.3vw); line-height:1.65; opacity:.82; margin-top:2.2vh; max-width:64vw" data-anim>
+      “我真人出镜的那条，流量、评论量、收藏量，远不及这一条我用 AI 制作的。文案都一模一样的。”
+    </p>
+
+    <div style="display:flex; gap:2vw; align-items:flex-start; justify-content:center; margin-top:auto; margin-bottom:1.2vh" data-anim>
+      <img class="shot" src="images/06-post.jpg" alt="帖子页：评论 1010、赞 1041、收藏 41" style="height:22vh">
+      <img class="shot" src="images/06-author.jpg" alt="作者留言：真人那条远不及 AI 这条，135 赞" style="height:22vh">
+      <img class="shot" src="images/06-comments.jpg" alt="评论区第一条：戳到了传媒学子的迷茫" style="height:22vh">
+    </div>
   </div>
   <div class="foot">
-    <div>Page 06 · 观众用脚投票</div>
+    <div>Page 06 · 观众用脚投票 · 点图片可放大</div>
     <div>Result</div>
   </div>
 </section>
@@ -1428,97 +1434,106 @@ const SPEAKER_NOTES = [
     "id": "cover",
     "title": "AIGC 来了，传媒生怎么办",
     "section": "开场",
-    "minutes": 0.8,
+    "minutes": 1.1,
     "purpose": "让观众知道这不是一次 AI 炫技，而是一次对照实验。",
     "talk": [
-      "先自我介绍一下，我们是第三组。",
-      "这次没有做“AI 有多强”的展示，而是把同一段文案拍了两遍：真人一遍，AI 数字人一遍。",
-      "片子和数据都已经发出去一周了，今天讲的是我们看完数据之后的真实想法。"
+      "先自我介绍，说明这是一次对照实验，不是“AI 有多厉害”的展示。",
+      "交代三个条件：同一段文案、同一个账号、同一周发布。",
+      "提前打预防针：结论不太舒服，但这是真实数据。",
+      "时间控制在 1 分钟，不要在这里展开。"
     ],
     "transition": "先回顾上次为什么能爆，才能说清这次为什么不行。",
-    "delivery": "语速放慢，第一句说完停半秒。"
+    "delivery": "语速放慢，第一句说完停半秒。",
+    "advance": "说完“自己怎么想”就翻页。"
   },
   {
     "id": "last-hit",
     "title": "靠“不正经”赢了一次",
     "section": "复盘",
-    "minutes": 1.0,
+    "minutes": 1.4,
     "purpose": "交代上期 21.7 万的成绩，以及可复用的方法。",
     "talk": [
-      "上期做的是冷门英语单词，讲英语里有、中文里没有的那种脏词。",
-      "21.7 万播放、9750 次分享，靠的不是知识含量，是反差和猎奇。",
-      "我们当时以为找到了公式：找一个能让人截图的点。"
+      "上期讲的是英语里有、中文里没有的那种脏词，一口气讲了六个。",
+      "21.7 万播放、9750 分享、904 收藏——重点讲分享量，说明它被转发了。",
+      "复盘出三个词：反差、猎奇、值得截图。",
+      "当时以为找到公式了，这句话后面会被打脸。"
     ],
-    "transition": "于是这次也照这个思路找题，结果连栽三次。"
+    "transition": "于是这次也照这个公式找题，结果连栽三次。",
+    "cue": "说到 9750 的时候停一下，让数字落地。"
   },
   {
     "id": "attempts",
     "title": "三个方向，数据没给面子",
     "section": "复盘",
-    "minutes": 1.0,
+    "minutes": 1.4,
     "purpose": "用三个真实数字说明“玩梗”这次失灵。",
     "talk": [
       "三个方向：AI 古风短片、播音生口播、互动征集帖。",
-      "2821、377、136，跟上次差了两个数量级。",
-      "最扎心的是评论区：41 条评论，一半在问用什么软件、多少钱——观众只对工具好奇。"
+      "2821、377、136，和上次差了两个数量级。",
+      "最扎心的是评论区：41 条评论，一半在问软件和价钱。",
+      "我们输的不是技术，是“这跟我有什么关系”。"
     ],
     "transition": "所以换一种做法：不再赌选题，做一次对照实验。",
-    "cue": "手指最下面那根几乎看不见的条。"
+    "cue": "手往屏幕下面那三根几乎看不见的条上指。"
   },
   {
     "id": "design",
     "title": "只改一个变量",
     "section": "方法",
-    "minutes": 1.0,
+    "minutes": 1.3,
     "purpose": "讲清控制变量，并主动交代不完美。",
     "talk": [
-      "文案逐字一样、BGM 一样、字幕样式一样、账号一样，只换人。",
-      "有两点如实说：AI 版为了节奏压到 45 秒，真人版 84 秒，这不算完美控制。",
-      "但能按住的都按住了，剩下的差异就是“谁在说”。"
+      "文案逐字一样、BGM 一样、字幕一样、账号一样，只换人。",
+      "两处不完美：时长 84 秒 vs 45 秒；只做了一次，样本很小。",
+      "先认下来，别等老师问——认了反而可信。",
+      "正因为只改一个变量，后面的差异才说得清。"
     ],
     "transition": "下面直接看两条片子。",
-    "delivery": "说“不干净”的时候不要含糊，反而更容易被老师接受。"
+    "delivery": "说“不干净”的时候不要含糊。"
   },
   {
     "id": "films",
     "title": "先看片子，再说结论",
     "section": "实证",
-    "minutes": 1.1,
+    "minutes": 1.4,
     "purpose": "让观众亲眼看到差别，而不是听我们描述。",
     "talk": [
-      "左边真人，右边 AI，各播 15 秒就够。",
-      "真人版状态有起伏、有停顿；AI 版每一遍都一模一样。",
-      "看她的手和眼睛——这是现在最容易露馅的地方，但也只有盯着看才看得出来。"
+      "左边真人，右边 AI，各播 15 秒。",
+      "注意状态：真人会累、会停顿；AI 每一遍都一样。",
+      "注意细节：手、眼睛、句子之间的呼吸。",
+      "评论区有人说“看了一半才发现”，这句话后面会用到。"
     ],
-    "cue": "现场点播放，各 15 秒；播完停两秒再说话。",
+    "cue": "点播放，各 15 秒；播完停两秒再说话。",
     "transition": "看完片子，看数据。",
-    "fallback": "现场没声音就只看画面，改口讲“看她的气息和停顿”。"
+    "fallback": "现场没声音就只看画面，改讲气息和停顿。"
   },
   {
     "id": "result",
     "title": "AI 那条，赢了",
     "section": "结果",
-    "minutes": 1.1,
+    "minutes": 1.6,
     "purpose": "抛出最不舒服的结论：同文案，AI 赢。",
     "talk": [
-      "1010 条评论、1041 个赞，比老师要求的 1000 条多了 10 条。",
-      "但作者自己那条留言才是重点：真人版的流量、评论、收藏都远不如 AI 版，文案一模一样。",
-      "也就是说，观众用脚投票，投给了 AI。"
+      "1010 条评论、1041 个赞、41 次收藏，超了老师 10 条。",
+      "收藏只有 41——说明大家在围观，不是在收藏知识。",
+      "作者自己的留言 135 赞：真人那条远不及 AI，文案一模一样。",
+      "观众用脚投票，投给了 AI。"
     ],
     "transition": "那观众到底在评论什么？翻一翻。",
-    "delivery": "念到“一模一样”的时候加重，停一秒。"
+    "delivery": "念到“文案一模一样”加重，停一秒。"
   },
   {
     "id": "comments",
     "title": "评论区比片子好看",
     "section": "观察",
-    "minutes": 1.2,
+    "minutes": 1.5,
     "purpose": "用三条真实评论解释“为什么观众不在意”。",
     "talk": [
-      "第一种：看了一半才发现是 AI——说明大部分人看不出，也不在乎。",
+      "第一种：看了一半才发现是 AI——大部分人看不出，也不在乎。",
       "第二种：刷屏的“AI 能替代传媒生吗”。",
-      "第三种最扎心：一个播音生希望 AI 赶紧出功能，帮他调语音、节奏、气息。",
-      "再补一个背景：报告说，过半数用户已经接触过 AI 生成的视音频。"
+      "第三种：播音生在问，AI 能不能帮他调语音、节奏、气息。",
+      "他们不是在问“会不会被替代”，是在问“能不能帮我干活”。",
+      "补背景：过半数用户已接触过 AI 生成视音频。"
     ],
     "transition": "这三条评论，正好对应我们要拆的三块能力。"
   },
@@ -1526,20 +1541,22 @@ const SPEAKER_NOTES = [
     "id": "leftovers",
     "title": "AI 接管了“播”",
     "section": "结论",
-    "minutes": 1.1,
+    "minutes": 1.5,
     "purpose": "把“播音”拆成采编播，指出被接管的是哪一块。",
     "talk": [
-      "采：现场、采访、关系；编：选题、结构、判断；播：发声、节奏、气息、稳定输出。",
-      "播这一块，AI 已经做得比我们稳，而且不喊累。",
-      "采和编还在人手里，因为要跟具体的人、具体的事打交道。"
+      "采：现场、采访、关系。",
+      "编：选题、结构、判断。",
+      "播：发声、节奏、气息、稳定输出——这块 AI 已经比我们稳。",
+      "被接管的，恰好是最容易被量化、被交付的那一块。"
     ],
-    "transition": "所以答案不是“打败它”，是分工。"
+    "transition": "所以答案不是“打败它”，是分工。",
+    "cue": "念到“播”时，手停在第三栏。"
   },
   {
     "id": "answer",
     "title": "让 AI 去念，让人去说",
     "section": "结论",
-    "minutes": 0.8,
+    "minutes": 1.1,
     "purpose": "给出小组的结论，短、可记住。",
     "talk": [
       "让 AI 去念，让人去说。",
@@ -1547,18 +1564,18 @@ const SPEAKER_NOTES = [
       "这不是退让，是分工。"
     ],
     "transition": "最后一句收尾。",
-    "delivery": "这三句一句一顿，不要连读。"
+    "delivery": "三句一顿，不要连读。"
   },
   {
     "id": "closing",
     "title": "欢迎拍砖",
     "section": "结束",
-    "minutes": 0.6,
+    "minutes": 0.7,
     "purpose": "收束并邀请提问，顺带给出方法上的提醒。",
     "talk": [
-      "以上就是我们组的汇报，谢谢大家。",
-      "如果你们也想做一次对照，先想清楚：你控制的变量，是不是真的只有一个。",
-      "数据来源在页脚，欢迎老师和同学拍砖。"
+      "谢谢大家。",
+      "如果你们也想做对照，先想清楚：你控制的变量，是不是真的只有一个。",
+      "数据来源在页脚，欢迎拍砖。"
     ],
     "transition": "演示结束，按 ← 可以回到封面重新开始。"
   }
@@ -2431,7 +2448,7 @@ window.__pptPresenter=(()=>{
   function reopenAudience(){
     initTransport();popupBlocked=false;audienceOpenedAt=Date.now();lastAckAt=0;lastAckIndex=-1;lastAckSeq=-1;
     if(audienceFrozen){audienceFrozen=false;screenMode='normal';}
-    audienceWindow=window.open(frameUrl('audience',idx),`guizang-ppt-audience-${session}`,'popup=yes,width=1440,height=900');
+    window.__pptAudienceWindow=audienceWindow=window.open(frameUrl('audience',idx),`guizang-ppt-audience-${session}`,'popup=yes,width=1440,height=900');
     if(!audienceWindow)popupBlocked=true;updateSyncStatus();
   }
   function enterPresenter(openAudience=true){
@@ -2668,23 +2685,99 @@ if(motion){
   <img alt="放大查看">
   <div class="zhint">点击任意处或按 ESC 关闭</div>
 </div>
+<div id="deckctl" aria-label="演示控制">
+  <span>演示控制</span>
+  <button type="button" data-cmd="video-toggle">⏵ 播放 / 暂停 <kbd>V</kbd></button>
+  <button type="button" data-cmd="video-seek" data-arg="-5">← 回退 5 秒</button>
+  <button type="button" data-cmd="video-seek" data-arg="5">→ 前进 5 秒</button>
+  <button type="button" data-cmd="zoom-next">🔍 放大图片 <kbd>Z</kbd></button>
+  <button type="button" data-cmd="zoom-close">✕ 关闭放大</button>
+</div>
 <script>
 (function(){
-  var z = document.getElementById('imgzoom');
-  var zi = z.querySelector('img');
-  function open(src){ zi.src = src; z.hidden = false; }
-  function close(){ z.hidden = true; zi.removeAttribute('src'); }
-  document.querySelectorAll('img.shot, figure.frame-img img').forEach(function(img){
-    img.addEventListener('click', function(e){
-      e.preventDefault(); e.stopPropagation();
-      open(img.currentSrc || img.src);
-    });
+  var zoom = document.getElementById('imgzoom');
+  var zoomImg = zoom.querySelector('img');
+  var bar = document.getElementById('deckctl');
+
+  function currentSlide(){
+    var list = document.querySelectorAll('.slide');
+    return list[window.__currentSlideIndex || 0];
+  }
+  function shotList(slide){
+    return Array.prototype.slice.call(slide.querySelectorAll('img.shot, figure.frame-img img'));
+  }
+  function openZoom(src){ if(!src) return; zoomImg.src = src; zoom.hidden = false; }
+  function closeZoom(){ zoom.hidden = true; zoomImg.removeAttribute('src'); }
+
+  function runCmd(d){
+    var slide = currentSlide();
+    if(!slide) return;
+    if(d.name === 'video-toggle'){
+      var v = slide.querySelector('video');
+      if(!v) return;
+      if(v.paused){ v.play().catch(function(){}); } else { v.pause(); }
+    } else if(d.name === 'video-seek'){
+      var v2 = slide.querySelector('video');
+      if(!v2) return;
+      var t = v2.currentTime + (Number(d.arg) || 0);
+      v2.currentTime = Math.max(0, Math.min(v2.duration || 0, t));
+    } else if(d.name === 'zoom-next'){
+      var imgs = shotList(slide);
+      if(!imgs.length) return;
+      var cur = -1;
+      if(!zoom.hidden){
+        for(var i=0;i<imgs.length;i++){ if(imgs[i].src === zoomImg.src) cur = i; }
+      }
+      var next = cur + 1;
+      if(next >= imgs.length){ closeZoom(); return; }
+      openZoom(imgs[next].currentSrc || imgs[next].src);
+    } else if(d.name === 'zoom-close'){
+      closeZoom();
+    }
+  }
+
+  window.__deckCmd = function(name, arg){
+    var msg = {__deckCmd:1, name:name, arg:arg};
+    var audience = window.__pptAudienceWindow;
+    var presenting = document.body.classList.contains('ppt-presenter');
+    if(presenting && audience && !audience.closed){
+      try{ audience.postMessage(msg, '*'); }catch(e){}
+      return;
+    }
+    runCmd(msg);
+  };
+
+  window.addEventListener('message', function(e){
+    if(e.data && e.data.__deckCmd) runCmd(e.data);
   });
-  z.addEventListener('click', close);
-  document.addEventListener('keydown', function(e){
-    if(z.hidden) return;
+
+  document.addEventListener('click', function(e){
+    var img = e.target.closest && e.target.closest('img.shot, figure.frame-img img');
+    if(img){ e.preventDefault(); openZoom(img.currentSrc || img.src); }
+  });
+  zoom.addEventListener('click', closeZoom);
+
+  bar.addEventListener('click', function(e){
+    var b = e.target.closest('button');
+    if(!b) return;
     e.stopPropagation();
-    if(e.key === 'Escape' || e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); close(); }
+    window.__deckCmd(b.dataset.cmd, b.dataset.arg ? Number(b.dataset.arg) : undefined);
+  });
+  function syncBar(){ bar.classList.toggle('on', document.body.classList.contains('ppt-presenter')); }
+  if(window.MutationObserver){
+    new MutationObserver(syncBar).observe(document.body, {attributes:true, attributeFilter:['class']});
+  }
+  syncBar();
+
+  window.addEventListener('keydown', function(e){
+    if(!document.body.classList.contains('ppt-presenter')) return;
+    var t = e.target;
+    if(t && t.matches && t.matches('input, textarea, [contenteditable="true"]')) return;
+    var k = (e.key || '').toLowerCase();
+    if(k === 'escape' && !zoom.hidden){ e.stopPropagation(); closeZoom(); return; }
+    if(e.metaKey || e.ctrlKey || e.altKey) return;
+    if(k === 'v'){ e.preventDefault(); e.stopPropagation(); window.__deckCmd('video-toggle'); }
+    else if(k === 'z'){ e.preventDefault(); e.stopPropagation(); window.__deckCmd('zoom-next'); }
   }, true);
 })();
 </script>
